@@ -28,7 +28,7 @@ float TimeScale = 0.000001f;
 const unsigned int SCR_WIDTH = 1200;
 const unsigned int SCR_HEIGHT = 800;
 bool isPaused = false;
-float t = 0.0f;
+float t = -1.0f;
 
 double param[18];
 std::string terms[9] = {"xx", "xy", "xt", "yt", "yy", "tt", "x", "y", "t"};
@@ -68,7 +68,7 @@ int main(int argc, char **argv){
     int partAmount = 1000;
     Particle particles(partAmount);
     for(int i = 0; i < partAmount; i++){
-        particles.setSize(i, 1.0f);
+        particles.setSize(i, 2.0f);
         float red = ((float)rand())/((float)RAND_MAX);
         float green = ((float)rand())/((float)RAND_MAX);
         float blue = ((float)rand())/((float)RAND_MAX);
@@ -209,7 +209,7 @@ void processInput(GLFWwindow *window){
 
     //reset input
     if(glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
-        t = 0.0f;
+        t = -1.0f;
 
     //saving/loading inputs
     if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
@@ -358,7 +358,7 @@ void loadEquation(){
 void newEquation(){
     randomParameters();
     createEquationText();
-    t = 0.0f;
+    t = -1.0f;
 }
 
 /**
