@@ -12,7 +12,7 @@ This program was written in C++, using the GLFW and GLAD libraries for a OpenGL 
 ## Chaos Equations
 In the context of the project, chaos equations (or chaotic equations) are simple polynomial equations that apply their results to themselves, for example, the pattern shown in the gif above had the equations:
 
-**x' = - x^2 - xy - xt + yt + tt + t**
+**x' = - x^2 - xy - xt + yt + tt - x + t**
 
 **y' = x^2 - xy + xt + t**
 
