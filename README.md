@@ -12,6 +12,8 @@ This program was written in C++, using the GLFW and GLAD libraries for a OpenGL 
 ## Chaos Equations
 In the context of the project, chaos equations (or chaotic equations) are simple polynomial equations that apply their results to themselves, for example, the pattern shown in the gif above had the equations:
 
-$$x' = -x^2 -xy -xt + yt+tt+t\\ y'=x^2-xy+xt+t$$
+**x' = -x^2 -xy -xt + yt+tt+t**
 
-First we start with $x = y =t$, and then show this point in this $x$ and $y$ position. After this we compute a new $x'$ and $y'$ that will be the position of a new point. Then we repeat this process for all the points we want to show on screen.
+**y'=x^2-xy+xt+t**
+
+First we start with **x = y =t**, and then show this point in this **x** and **y** position. After this we compute a new **x'** and **y'** that will be the position of a new point. Then we repeat this process for all the points we want to show on screen.
